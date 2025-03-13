@@ -44,7 +44,7 @@ client.on(Events.InteractionCreate, async interaction => {
     if (!interaction.isChatInputCommand()) return;
 
     if (interaction.commandName === 'ctf') {
-        if (interaction.options.getSubcommand() === 'createctf') {
+        if (interaction.options.getSubcommand() === 'create') {
             const ctfName = interaction.options.getString('name');
             
             try {
@@ -69,11 +69,11 @@ client.on(Events.InteractionCreate, async interaction => {
                     { name: '🎤general', type: 2 },
                     { name: '📌notice', type: 0 },
                     { name: '🔑credentials', type: 0 },
-                    { name: '[pwn]', type: 0 },
-                    { name: '[rev]', type: 0 },
-                    { name: '[web]', type: 0 },
-                    { name: '[crypto]', type: 0 },
-                    { name: '[misc]', type: 0 }
+                    { name: '📁[pwn]', type: 0 },
+                    { name: '📁[rev]', type: 0 },
+                    { name: '📁[web]', type: 0 },
+                    { name: '📁[crypto]', type: 0 },
+                    { name: '📁[misc]', type: 0 }
                 ];
 
                 for (const channelData of channels) {
